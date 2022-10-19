@@ -1,0 +1,24 @@
+websocket --> ẽ uma forma de fazer uma conexao tcp do seu browser com o servidor (ao inves de ficar mandando varias requisicoes ele mantem uma estavel(direto)) .
+
+
+kafka
+--> topic ? --> e um stream de dados que atua como um banco de dados
+--> todos os dados ficam armazenados, ou seja cada topic tem seu 'local' para armazenar seus dados.
+--> topicos possui diversas particoes.
+--> cd particao e definido por um numero: 0,1,2,3
+--> vc e obrigado a definir a qnt de particoes quando for criar um topic
+
+
+producers --> produtor da msg (writes)
+consumer --> o cara que vai cconsumir a msg (reads) no caso eu posso ter varios consumer ao mesmo tempo consumindos varias msg simultaneamente
+
+# resumindo o kafka é um cluster
+
+--> um conjunto de brokers(é praticamente um servidor)
+--> cada broker e um server
+--> cd broker e responsavel por armazaner os dados de uma particao
+--> cd particao de topic esta distribuido em diferente brokers
+
+apache zookeeper --> é responsavel por monitorar os brokers para verificar se estao todos online, caso esteja alguma offline ele faz o balaceamento e equilibra todo sistema sozinho
+
+offset --> é onde qual posicao a msg esta gravada
